@@ -1,3 +1,3 @@
 package com.github.valentina810.localizationservice.service
 
-interface ILocalizationService
+interface LocalizationService

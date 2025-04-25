@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/localization-db
+  application:
+    name: localization-service
+server:
+  port: 8080
