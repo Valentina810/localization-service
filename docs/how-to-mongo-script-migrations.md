@@ -4,6 +4,6 @@
 - сделать скрипт исполняемым командой ```chmod +x src/db/run_scripts.sh``` <br>
 - запустить скрипт командой ```./src/db/run_scripts.sh ``` <br>
 Должно получиться:
-<div align="center"><img width="800" src="https://github.com/valentina810/localization-service/blob/main/src/docs/img/3.png"></div>
-<div align="center"><img width="800" src="https://github.com/valentina810/localization-service/blob/main/src/docs/img/2.png"></div>
-<div align="center"><img width="800" src="https://github.com/valentina810/localization-service/blob/main/src/docs/img/1.png"></div>
+<div align="center"><img width="800" src="https://github.com/Valentina810/localization-service/blob/master/docs/img/3.png"></div>
+<div align="center"><img width="800" src="https://github.com/Valentina810/localization-service/blob/master/docs/img/2.png"></div>
+<div align="center"><img width="800" src="https://github.com/Valentina810/localization-service/blob/master/docs/img/1.png"></div>
