@@ -8,6 +8,7 @@ FILES=(
   "20250428_3_add_it_locale.js"
   "20250428_4_add_zh_locale.js"
   "20250428_5_add_ja_locale.js"
+  "20250504_6_update_structure.js"
 )
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
