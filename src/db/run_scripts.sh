@@ -14,9 +14,11 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "$SCRIPT_DIR" || { echo "Не удалось перейти в $SCRIPT_DIR"; exit 1; }
 
+echo "Начинаю запуск скриптов из $SCRIPT_DIR"
+
 for file in "${FILES[@]}"; do
   if [[ -f "$file" ]]; then
-    echo "Вставка данных из $file..."
+    echo "Выполнение скрипта $file..."
     mongosh "$DB_NAME" "$file"
 
     if [ $? -ne 0 ]; then
@@ -29,4 +31,4 @@ for file in "${FILES[@]}"; do
   fi
 done
 
-echo "Все записи успешно вставлены в базу данных $DB_NAME!"
+echo "Все скрипты выполнены!"
