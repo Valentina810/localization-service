@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 
 @Document("localization")
-data class LocalizationDocument(
+data class LocalizationScreens(
     @Id
     val id: String,
     val locale: String,

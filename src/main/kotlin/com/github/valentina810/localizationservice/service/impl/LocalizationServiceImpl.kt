@@ -7,6 +7,6 @@ import org.springframework.stereotype.Service
 
 @Service
 class LocalizationServiceImpl(private val localizationRepository: LocalizationRepository) : LocalizationService {
-    override fun getTranslation(locale: String, screenName: String): Screen? =
-        localizationRepository.findScreenByLocaleAndScreen(locale, screenName)
+    override fun getScreenByLocale(locale: String, screenName: String): Screen? =
+        localizationRepository.findScreenByLocale(locale, screenName)
 }

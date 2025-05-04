@@ -13,7 +13,7 @@ class LocalizationController(private val localizationService: LocalizationServic
 
     @GetMapping("/{locale}/{screen}")
     fun getTranslation(@PathVariable locale: String, @PathVariable screen: String): ResponseEntity<Any> {
-        val translation = localizationService.getTranslation(locale, screen)
+        val translation = localizationService.getScreenByLocale(locale, screen)
         return if (translation != null) ResponseEntity.ok(translation)
         else ResponseEntity.notFound().build()
     }

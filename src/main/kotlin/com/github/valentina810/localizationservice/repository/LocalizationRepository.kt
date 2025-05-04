@@ -1,11 +1,11 @@
 package com.github.valentina810.localizationservice.repository
 
-import com.github.valentina810.localizationservice.model.LocalizationDocument
+import com.github.valentina810.localizationservice.model.LocalizationScreens
 import com.github.valentina810.localizationservice.model.Screen
 import org.springframework.data.mongodb.repository.Aggregation
 import org.springframework.data.mongodb.repository.MongoRepository
 
-interface LocalizationRepository : MongoRepository<LocalizationDocument, String> {
+interface LocalizationRepository : MongoRepository<LocalizationScreens, String> {
 
     @Aggregation(pipeline = [
         "{ '\$match': { 'locale': ?0 } }",
@@ -13,5 +13,5 @@ interface LocalizationRepository : MongoRepository<LocalizationDocument, String>
         "{ '\$match': { 'screens.screen': ?1 } }",
         "{ '\$replaceRoot': { 'newRoot': '\$screens' } }"
     ])
-    fun findScreenByLocaleAndScreen(locale: String, screen: String): Screen?
+    fun findScreenByLocale(locale: String, screen: String): Screen?
 }
