@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mongodb:
+    build:
+      context: .
+      dockerfile: Dockerfile.mongo
+    container_name: mongodb-container
+    ports:
+      - "27017:27017"
+
+  localization-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: localization-service-container
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/localization-db

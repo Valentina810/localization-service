@@ -10,11 +10,12 @@ FILES=(
   "20250428_5_add_ja_locale.js"
   "20250504_6_update_structure.js"
 )
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-cd "$SCRIPT_DIR" || { echo "Не удалось перейти в $SCRIPT_DIR"; exit 1; }
+SCRIPT_DIR="/scripts"
 
 echo "Начинаю запуск скриптов из $SCRIPT_DIR"
+
+cd "$SCRIPT_DIR" || { echo "Не удалось перейти в $SCRIPT_DIR"; exit 1; }
 
 for file in "${FILES[@]}"; do
   if [[ -f "$file" ]]; then

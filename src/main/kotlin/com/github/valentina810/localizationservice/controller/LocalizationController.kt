@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController
 class LocalizationController(private val localizationService: LocalizationService) {
 
     @GetMapping("/{locale}/{screen}")
-    fun getTranslation(@PathVariable locale: String, @PathVariable screen: String): ResponseEntity<Any> {
-        val translation = localizationService.getScreenByLocale(locale, screen)
-        return if (translation != null) ResponseEntity.ok(translation)
+    fun getScreenByLocale(@PathVariable locale: String, @PathVariable screen: String): ResponseEntity<Any> {
+        val screenByLocale = localizationService.getScreenByLocale(locale, screen)
+        return if (screenByLocale != null) ResponseEntity.ok(screenByLocale)
         else ResponseEntity.notFound().build()
     }
 }

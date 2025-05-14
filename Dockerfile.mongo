@@ -1,0 +1,5 @@
+FROM mongo:7.0
+
+COPY ./src/db/scripts /scripts
+COPY ./src/db/run_scripts.sh /docker-entrypoint-initdb.d/run_scripts.sh
+RUN chmod +x /docker-entrypoint-initdb.d/run_scripts.sh
